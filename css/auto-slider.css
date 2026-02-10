@@ -1,0 +1,55 @@
+.auto-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 10px 0px 20px;
+    background: #fff;
+    max-width: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+
+@keyframes sliding{
+            0%{left: 0%; }
+            9.1%{left: -100%;}
+			18.2%{left: -200%;}
+			27.3%{left: -300%;}
+            36.4%{left: -400%;}
+            45.5%{left: -500%;}
+            54.6%{left: -600%;}
+            63.7%{left: -700%;}
+			72.8%{left: -800%;}
+			81.9%{left: -900%;}
+			91%{left: -1000%;}
+			100%{left: 0%;}
+        }        
+        
+@keyframes indicating{
+            from{
+                left: -100%;
+            }
+            to{
+                left: 0;
+            }
+}  
+        
+        
+div#slider { overflow: hidden; }
+div#slider figure img { width: 9.09%; float: left; z-index: 5;}
+div#slider figure { 
+  position: relative;
+  width: 1100%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  z-index: 20;
+  animation: 60s sliding ease infinite; 
+  animation-delay           : 1s;
+}
+
+/* Slider indicator */
